@@ -37,7 +37,9 @@ function randomWinner (humanChoice, computerChoice) {
     };
 };
 
-function playRound (humanChoice, computerChoice) {
+
+function playGame() {
+    function playRound (humanChoice) {
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
     const result = randomWinner(humanChoice.toUpperCase(), computerChoice);
@@ -45,11 +47,10 @@ function playRound (humanChoice, computerChoice) {
     console.log(`You chose ${humanChoice}, computer chose ${computerChoice}.`);
     console.log(result);
 };
-
-function playGame () {
-    console.log(playRound());
+  return "Game started!"; 
 }
 
+console.log(playGame());
      
     </script>
 </body>
