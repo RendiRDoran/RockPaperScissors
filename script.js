@@ -1,3 +1,25 @@
+function playNewGame(playerOneScore, playerTwoScore) {
+    function askPlayerMode() {
+    let mode = prompt("Play against a human or a computer?");
+
+    mode = mode.toLowerCase();
+
+    if (mode === "human") {
+        alert("Play against another human! Excellent Choice!");
+        playAgainstHuman();
+    }
+    else if(mdoe === "computer") {
+        alert("Play against the computer! Fabulous idea!");
+        playAgainstComputer();
+        playRockPaperScissors();
+    }
+    else {
+        alert("Please choose who you would like to play against");
+        askPlayerMode();
+    }
+    }
+};
+
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * 3); 
@@ -33,27 +55,4 @@ function playRockPaperScissors() {
     } 
     playRockPaperScissors();
 
-}
-
-
-function playNewGame(playerOneScore, playerTwoScore) {
-    function askPlayerMode() {
-    let mode = prompt("Play against a human or a computer?");
-
-    mode = mode.toLowerCase();
-
-    if (mode === "human") {
-        alert("Play against another human! Excellent Choice!");
-        playAgainstHuman();
-    }
-    else if(mdoe === "computer") {
-        alert("Play against the computer! Fabulous idea!");
-        playAgainstComputer();
-        playRockPaperScissors();
-    }
-    else {
-        alert("Please choose who you would like to play against");
-        askPlayerMode();
-    }
-    }
-}
+};
